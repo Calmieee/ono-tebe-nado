@@ -1,6 +1,11 @@
 html {
     scroll-behavior: smooth;
 }
+
+body {
+    font-family: Raleway,Arial, sans-serif;
+}
+
 a {
     text-decoration: none;
     border-bottom: 1px #000 solid;
@@ -70,11 +75,9 @@ a {
     position: relative;
     z-index: -2;
     margin-bottom: 179px;
-    
 }
 
 .cover-title {
-    display: block;
     display: flex;
     flex-direction: column;
     color: #FFF;
@@ -203,15 +206,15 @@ a {
     margin: 0px 40px 50px 40px;
 }
 
-.first {
+.first-text-card {
     margin-top: 201px;
 }
 
-.second {
+.second-text-card {
     margin-top: 31px;
 }
 
-.third {
+.third-text-card {
     margin-top: 79px;
 }
 

@@ -3,10 +3,17 @@ html {
 }
 a {
     text-decoration: none;
+    border-bottom: 1px #000 solid;
+}
+
+.none-underline {
+    border-bottom: none;
 }
 
 .overlay {
     position: absolute;
+    inset: 0;
+    z-index: -1;
     height: 100%;
     width: 100%;
     opacity: 0.6;
@@ -15,11 +22,11 @@ a {
 
 .header {
     display: grid;
-    grid-template-columns: 4;
-    grid-template-rows: 1;
+    grid-template-columns: 593px 138px 340px ;
+    grid-template-rows: 112px;
     grid-template-areas: 
     'menu logo . contacts';
-    margin: 92px 49px 92px 50px;
+    margin: 90px 50px 91px 50px;
     align-items: center;
     justify-content: space-between;
 }
@@ -32,8 +39,6 @@ a {
 .header-nav-list {
     float: left;
     padding-right: 32px;
-    text-decoration: underline;
-    font-family: Raleway;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -42,24 +47,15 @@ a {
 
 .unmarker {
     list-style-type: none;
-    text-decoration: none;
 }
 
 .logo {
-    width: 148px;
-    height: 105px;
+    align-self: end;
     grid-area: logo;  
-}
-
-.logo-img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
 }
 
 .contacts {
     grid-area: contacts;
-    font-family: Raleway;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -68,59 +64,54 @@ a {
 }
 
 .cover {
+    background-image: url(../images/cover.jpg);
+    background-size: cover;
+    background-position: center;
     position: relative;
-    min-height: 757px;
-}
-
-.cover-img{
-    position: absolute;
-    max-height:100%;
     z-index: -2;
+    margin-bottom: 179px;
+    
 }
 
 .cover-title {
+    display: block;
     display: flex;
     flex-direction: column;
-    min-width: 1400px;
-    position: absolute;
-    z-index: 1;
     color: #FFF;
     font-size: 100px;
     font-style: normal;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 30px;
-    padding: 169px 50px 0;
-}
+    padding: 163px 20px 128px 50px;
 
-.first-raw {
-    display: block;
 }
 
 .second-raw {
-    display: block;
     align-self: center;
     padding-top: 10px;
-    padding-left: 40px;
+    padding-right: 30px;
 }
 
 .last-raw {
-    display: block;
     align-self: flex-end;
-    padding-top: 2px;
-    margin-right: -70px;
+    padding-top: 3px;
 }
 
 .letter-spacing {
     letter-spacing: 60px;
 }
 
+.cover-details {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
 .cover-button {
-    position: absolute;
     text-transform: uppercase;
     border: 1px solid #FFF;
-    top: 660px;
-    left: 1133px;
     width: 257px;
     height: 52px;
     font-size: 22px;
@@ -130,24 +121,19 @@ a {
 }
 
 .subline {
-    position: absolute;
-    top: 673px;
-    left: 422px;
     font-size: 22px;
     line-height: 28px; 
     text-transform: uppercase;
     word-spacing: 18px;
     color: #FFF; 
+    padding-right: 80px;
 }
 
 .lots {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    inset: 185px 50px;
-    min-height: 579px;
-    width: 1340px;
-    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    
 }
 
 .lots-title {
@@ -155,98 +141,128 @@ a {
     font-weight: 700;
     text-transform: uppercase;
     margin-left: 40px;
-    min-width: 100%;
+    width: 100%;
+}
+
+.lots-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1; 
+    margin-bottom: 27px;
+    gap: 25px;
+    
 }
 
 .card {
     position: relative;
-    margin-top: -30px;
-    max-width: 430px;
-    max-height: 450px;
-    flex-grow: 1;
+    width: 430px;
+    margin-top: 28px;
 }
 
-.card-link {
+.first-card-img {
+    display: absolute;
+    background-image: url(../images/card-lot-01.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    z-index: -2;
+}
+
+.second-card-img{
+    display: absolute;
+    background-image: url(../images/card-lot-02.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    z-index: -2;
+}
+
+.third-card-img{
+    display: absolute;
+    background-image: url(../images/card-lot-03.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    z-index: -2;
+}
+
+.card-heading {
     color: white;
-    position: absolute;
-    inset: 50px 40px;
     font-size: 22px;
     line-height: 120%;
     text-transform: uppercase;
-    width: 350px;
+    text-decoration: underline;
+    margin: 50px 40px 0;
 }
 
 .card-description {
-    position: absolute;
-    left: 40px;
-    bottom: 50px;
     color: #FFF;
     font-size: 20px;
-    line-height: 120%;
-    width: 350px;
+    line-height: 120%; 
+    margin: 0px 40px 50px 40px;
+}
+
+.first {
+    margin-top: 201px;
+}
+
+.second {
+    margin-top: 31px;
+}
+
+.third {
+    margin-top: 79px;
 }
 
 .lots__look-more-link {
-    position: absolute;
-    left: 40px;
-    bottom: 2px;
     font-size: 20px;
+    margin-left: 40px;
 }
 
 .about {
-    position: relative;
-    inset: 281px 50px;
-    width: 1340px;
-    min-height: 570px;
+    display: grid;
+    grid-template-columns: 2fr;
+    margin: 182px 50px 100px 145px;
+    gap: 120px;
 }
 
 .logo-black {
-    display: flex;
-    position: absolute;
-    inset: 82px 95px;
     background-color: #000;
     width: 240px;
     height: 240px;
     border-radius: 100%;
-    align-items:center;
-    justify-content: center;
 }
 
 .about-logo {
-    width: 148px;
-    height: 114px;
+    padding: 63px 46px;
 }
 
 .about-description {
-    position: absolute;
-    top: 185px;
-    left: 455px;
-    bottom: 0;
+    margin-top: 104px;
+    grid-column-start: 2;
 }
 
 .about-heading {
     font-size: 40px;
     font-weight: 700;
     text-transform: uppercase;
-    min-width: 100%;
+    width: 100%;
 }
 
-.description {
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     font-size: 20px;
+    margin-top: 98px;
 }
 
-.top {
-    margin-top: 100px;
-}
 
-.bottom {
-    margin-top: 25px;
-}
 
 .footer {
     display: flex;
-    margin: 460px 50px 50px;
-    height: 100px;
+    margin: 180px 50px 50px;
     justify-content: space-between;
 }
 
@@ -257,17 +273,17 @@ a {
     font-size: 18px;
 }
 
-.footer-nav-list {
-    text-decoration: underline;
-}
+
 
 .socials {
     display: flex;
+    gap: 48px;
     width: 240px;
-    justify-content: space-between;
+    padding-top: 3px;
 }
 
 .socials-link{
+    float: left;
     width: 48px;
     height: 48px;
 }

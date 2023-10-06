@@ -160,34 +160,25 @@ a {
 .card {
     position: relative;
     width: 430px;
-    height: 450px;
     margin-top: 28px;
 }
 
-.first-card-img {
-    display: absolute;
-    inset: 0;
-    background-image: url(../images/card-lot-01.jpg);
+.card-img {
     background-size: cover;
     background-position: center;
     height: 100%;
     z-index: -2;
+}
+.first-card-img {
+    background-image: url(../images/card-lot-01.jpg);
 }
 
 .second-card-img{
     background-image: url(../images/card-lot-02.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    z-index: -2;
 }
 
 .third-card-img{
     background-image: url(../images/card-lot-03.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    z-index: -2;
 }
 
 .card-heading {

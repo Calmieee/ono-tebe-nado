@@ -27,11 +27,10 @@ a {
 
 .header {
     display: grid;
-    grid-template-columns: 593px 138px 340px ;
-    grid-template-rows: 112px;
+    grid-template-columns: 1fr 0.233fr 1fr;
     grid-template-areas: 
-    'menu logo . contacts';
-    margin: 90px 50px 91px 50px;
+    'menu logo contacts';
+    padding: 90px 50px 91px 50px;
     align-items: center;
     justify-content: space-between;
 }
@@ -56,10 +55,11 @@ a {
 
 .logo {
     align-self: end;
-    grid-area: logo;  
+    grid-area: logo;
 }
 
 .contacts {
+    justify-self: end;
     grid-area: contacts;
     font-size: 18px;
     font-style: normal;
@@ -136,7 +136,6 @@ a {
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 50px;
-    
 }
 
 .lots-title {
@@ -152,9 +151,8 @@ a {
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1; 
-    margin-bottom: 27px;
+    margin-bottom: 29px;
     gap: 25px;
-    
 }
 
 .card {
@@ -268,7 +266,6 @@ a {
 .socials {
     display: flex;
     gap: 48px;
-    width: 240px;
     padding-top: 3px;
 }
 

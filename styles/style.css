@@ -171,11 +171,11 @@ a {
     background-image: url(../images/card-lot-01.jpg);
 }
 
-.second-card-img{
+.second-card-img {
     background-image: url(../images/card-lot-02.jpg);
 }
 
-.third-card-img{
+.third-card-img {
     background-image: url(../images/card-lot-03.jpg);
 }
 
@@ -269,7 +269,7 @@ a {
     padding-top: 3px;
 }
 
-.socials-link{
+.socials-link {
     float: left;
     width: 48px;
     height: 48px;
